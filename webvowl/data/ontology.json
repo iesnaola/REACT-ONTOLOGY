@@ -1,0 +1,105 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.2-SNAPSHOT), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://purl.org/vocommons/voaf", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "en" : "The REACT Ontology."
+    },
+    "iri" : "https://w3id.org/react#",
+    "version" : "0.1",
+    "author" : [ "Iker Esnaola-Gonzalez <mailto:iker.esnaola@tekniker.es>" ],
+    "description" : {
+      "en" : "The REACT ontology aims to represent all the necessary knowledge to support the avhievement of island energy independence through renewable energy generation and storage, a demand response platform, and promoting user engagement in a local energy community.\n\nThe REACT ontology has been developed as part of the REACT project which has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement no. 824395.",
+      "undefined" : "The REACT Ontology"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by-nc/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Iker Esnaola-Gonzalez <mailto:iker.esnaola@tekniker.es>",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Ignacio Lazaro <mailto:ignacio.lazar@tekniker.es>\r\nNikola Tomasevic <mailto:nikola.tomasevic@pupin.rs>\r\nMarko Jelic <mailto:marko.jelic@pupin.rs>\r\nDea Pujic <mailto:dea.pujic@pupin.rs>\r\nLluis Millet <mailto:lluis.millet.biosca@ise.fraunhofer.de>",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2021-06-01",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "react",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.1",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/react",
+        "type" : "iri"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "The REACT Ontology.",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2021-07-22",
+        "type" : "label"
+      } ],
+      "status" : [ {
+        "identifier" : "status",
+        "language" : "en",
+        "value" : "Work in Progress",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "metrics" : {
+    "classCount" : 1,
+    "objectPropertyCount" : 0,
+    "datatypePropertyCount" : 0,
+    "individualCount" : 1
+  },
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://purl.org/vocommons/voaf#Vocabulary",
+    "baseIri" : "http://purl.org/vocommons/voaf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Vocabulary"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/react#",
+      "baseIri" : "https://w3id.org/react",
+      "labels" : { }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "0"
+  } ]
+}

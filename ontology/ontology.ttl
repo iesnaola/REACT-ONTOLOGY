@@ -1,0 +1,118 @@
+@prefix : <https://w3id.org/react##> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/react#> .
+
+<https://w3id.org/react#> rdf:type owl:Ontology ;
+                           <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by-nc/4.0/> ;
+                           <http://purl.org/dc/terms/contributor> """Ignacio Lazaro <mailto:ignacio.lazar@tekniker.es>
+Nikola Tomasevic <mailto:nikola.tomasevic@pupin.rs>
+Marko Jelic <mailto:marko.jelic@pupin.rs>
+Dea Pujic <mailto:dea.pujic@pupin.rs>
+Lluis Millet <mailto:lluis.millet.biosca@ise.fraunhofer.de>"""^^xsd:string ;
+                           <http://purl.org/dc/terms/created> "2021-06-01"^^xsd:string ;
+                           <http://purl.org/dc/terms/creator> "Iker Esnaola-Gonzalez <mailto:iker.esnaola@tekniker.es>"^^xsd:string ;
+                           <http://purl.org/dc/terms/description> """The REACT ontology aims to represent all the necessary knowledge to support the avhievement of island energy independence through renewable energy generation and storage, a demand response platform, and promoting user engagement in a local energy community.
+
+The REACT ontology has been developed as part of the REACT project which has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement no. 824395."""@en ,
+                                                                  "The REACT Ontology"^^xsd:string ;
+                           <http://purl.org/dc/terms/issued> "2021-07-22"^^xsd:string ;
+                           <http://purl.org/dc/terms/title> "The REACT Ontology."@en ;
+                           <http://purl.org/ontology/bibo/status> "Work in Progress"@en ;
+                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "react"^^xsd:string ;
+                           <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/react> ;
+                           owl:versionInfo 0.1 .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/vocommons/voaf#Vocabulary
+<http://purl.org/vocommons/voaf#Vocabulary> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/react#
+<https://w3id.org/react#> rdf:type owl:NamedIndividual ,
+                                   <http://purl.org/vocommons/voaf#Vocabulary> .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
