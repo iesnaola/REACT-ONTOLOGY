@@ -208,9 +208,9 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/react#hasSamplingMethod
 :hasSamplingMethod rdf:type owl:DatatypeProperty ;
                    rdfs:domain <https://w3id.org/eep#Execution> ;
+                   rdfs:comment "Sampling method of a given Execution"@en ;
                    rdfs:isDefinedBy : ;
-                   rdfs:label "Sampling method of a given Execution"@en ,
-                              "hasSamplingMethod"@en ;
+                   rdfs:label "hasSamplingMethod"@en ;
                    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 
 

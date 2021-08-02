@@ -342,8 +342,8 @@ The REACT ontology has been developed as part of the REACT project which has rec
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/react#hasSamplingMethod">
         <rdfs:domain rdf:resource="https://w3id.org/eep#Execution"/>
+        <rdfs:comment xml:lang="en">Sampling method of a given Execution</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/react#"/>
-        <rdfs:label xml:lang="en">Sampling method of a given Execution</rdfs:label>
         <rdfs:label xml:lang="en">hasSamplingMethod</rdfs:label>
         <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
     </owl:DatatypeProperty>
