@@ -1,6 +1,580 @@
 <h2  id="crossreference" class="list">Cross reference for The REACT Ontology. classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by The REACT Ontology..
-<div id="namedindividuals">
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Battery" title="https://w3id.org/react#Battery">Battery</a>
+      </li>
+      <li>
+         <a href="#PVSystem" title="https://w3id.org/react#PVSystem">PV System</a>
+      </li>
+   </ul>
+   <div class="entity" id="Battery">
+      <h3>Battery<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/react#Battery</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/react#">https://w3id.org/react#</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Term status</dt>
+         <dd>testing</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="https://w3id.org/eep#Executor">executor</span>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasBatteryCapacity" title="https://w3id.org/react#hasBatteryCapacity">hasBatteryCapacity</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasTotalStorageCapacity" title="https://w3id.org/react#hasTotalStorageCapacity">hasTotalStorageCapacity</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasVoltage" title="https://w3id.org/react#hasVoltage">hasVoltage</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PVSystem">
+      <h3>PV System<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/react#PVSystem</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/react#">https://w3id.org/react#</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Term status</dt>
+         <dd>testing</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="https://w3id.org/eep#Executor">executor</span>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasTotalProductionCapacity"
+               title="https://w3id.org/react#hasTotalProductionCapacity">hasTotalProductionCapacity</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#isManagedBy" title="https://w3id.org/react#isManagedBy">isManagedBy</a>
+      </li>
+   </ul>
+   <div class="entity" id="isManagedBy">
+      <h3>isManagedBy<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/react#isManagedBy</p>
+      <div class="comment">
+         <span class="markdown">Relationship between an Executor and another Executor that manages it.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/react#">https://w3id.org/react#</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Term status</dt>
+         <dd>stable</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/eep#Executor">executor</span>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/eep#Executor">executor</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#equipmentCategory" title="https://w3id.org/react#equipmentCategory">
+            <span>equipment category</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasGridType" title="https://w3id.org/react#hasGridType">
+            <span>has grid type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasAccessType" title="https://w3id.org/react#hasAccessType">hasAccessType</a>
+      </li>
+      <li>
+         <a href="#hasBatteryCapacity" title="https://w3id.org/react#hasBatteryCapacity">hasBatteryCapacity</a>
+      </li>
+      <li>
+         <a href="#hasDemandEnergyCarrier" title="https://w3id.org/react#hasDemandEnergyCarrier">hasDemandEnergyCarrier</a>
+      </li>
+      <li>
+         <a href="#hasEnergy" title="https://w3id.org/react#hasEnergy">hasEnergy</a>
+      </li>
+      <li>
+         <a href="#hasGenerationEnergyCarrier"
+            title="https://w3id.org/react#hasGenerationEnergyCarrier">hasGenerationEnergyCarrier</a>
+      </li>
+      <li>
+         <a href="#hasInstallationDate" title="https://w3id.org/react#hasInstallationDate">hasInstallationDate</a>
+      </li>
+      <li>
+         <a href="#hasMeasurementIndex" title="https://w3id.org/react#hasMeasurementIndex">hasMeasurementIndex</a>
+      </li>
+      <li>
+         <a href="#hasModuleQuantity" title="https://w3id.org/react#hasModuleQuantity">hasModuleQuantity</a>
+      </li>
+      <li>
+         <a href="#hasTechnology" title="https://w3id.org/react#hasTechnology">hasTechnology</a>
+      </li>
+      <li>
+         <a href="#hasTotalProductionCapacity"
+            title="https://w3id.org/react#hasTotalProductionCapacity">hasTotalProductionCapacity</a>
+      </li>
+      <li>
+         <a href="#hasTotalStorageCapacity" title="https://w3id.org/react#hasTotalStorageCapacity">hasTotalStorageCapacity</a>
+      </li>
+      <li>
+         <a href="#hasVoltage" title="https://w3id.org/react#hasVoltage">hasVoltage</a>
+      </li>
+      <li>
+         <a href="#hasSamplingMethod" title="https://w3id.org/react#hasSamplingMethod">Sampling method of a given Execution</a>
+      </li>
+   </ul>
+   <div class="entity" id="equipmentCategory">
+      <h3>equipment category<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/react#equipmentCategory</p>
+      <dl>
+         <dt>Term status</dt>
+         <dd>testing</dd>
+      </dl>
+   </div>
+   <div class="entity" id="hasGridType">
+      <h3>has grid type<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/react#hasGridType</p>
+      <dl>
+         <dt>Term status</dt>
+         <dd>testing</dd>
+      </dl>
+   </div>
+   <div class="entity" id="hasAccessType">
+      <h3>hasAccessType<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/react#hasAccessType</p>
+      <div class="comment">
+         <span class="markdown">The type of acces of a given Execution</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/react#">https://w3id.org/react#</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Term status</dt>
+         <dd>testing</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/eep#Execution">execution</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasBatteryCapacity">
+      <h3>hasBatteryCapacity<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/react#hasBatteryCapacity</p>
+      <div class="comment">
+         <span class="markdown">The nominal charge stored by a given Battery.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/react#">https://w3id.org/react#</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Term status</dt>
+         <dd>stable</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Battery" title="https://w3id.org/react#Battery">Battery</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDemandEnergyCarrier">
+      <h3>hasDemandEnergyCarrier<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/react#hasDemandEnergyCarrier</p>
+      <div class="comment">
+         <span class="markdown">Energy carriers present in a given facility (bot:Space) as demand</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/react#">https://w3id.org/react#</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Term status</dt>
+         <dd>stable</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/bot#Space">space</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasEnergy">
+      <h3>hasEnergy<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/react#hasEnergy</p>
+      <div class="comment">
+         <span class="markdown">The nominal energy of a given Equipment (eep:Executor)</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/react#">https://w3id.org/react#</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Term status</dt>
+         <dd>stable</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/eep#Executor">executor</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasGenerationEnergyCarrier">
+      <h3>hasGenerationEnergyCarrier<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/react#hasGenerationEnergyCarrier</p>
+      <div class="comment">
+         <span class="markdown">Energy carriers present in a given facility (bot:Space) as local generators</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/react#">https://w3id.org/react#</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Term status</dt>
+         <dd>stable</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/bot#Space">space</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasInstallationDate">
+      <h3>hasInstallationDate<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/react#hasInstallationDate</p>
+      <div class="comment">
+         <span class="markdown">Date when a given Equipment (eep:Executor) was installed.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/react#">https://w3id.org/react#</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Term status</dt>
+         <dd>stable</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/eep#Executor">executor</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasMeasurementIndex">
+      <h3>hasMeasurementIndex<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/react#hasMeasurementIndex</p>
+      <div class="comment">
+         <span class="markdown">Measurement index of an Execution or a set of Executions. Measurement index for scalar values is set to 1. For vector values (e.g. 3-phase measurement), it is set to the corresponding value: 1,2,3…</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/react#">https://w3id.org/react#</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Term status</dt>
+         <dd>stable</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/eep#Execution">execution</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasModuleQuantity">
+      <h3>hasModuleQuantity<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/react#hasModuleQuantity</p>
+      <div class="comment">
+         <span class="markdown">The quantity of modules that composes a given energy storage or production system</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/react#">https://w3id.org/react#</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Term status</dt>
+         <dd>stable</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Battery" title="https://w3id.org/react#Battery">Battery</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#PVSystem" title="https://w3id.org/react#PVSystem">PV System</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasTechnology">
+      <h3>hasTechnology<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/react#hasTechnology</p>
+      <div class="comment">
+         <span class="markdown">Base technology of a given Equipment (eep:Executor)</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/react#">https://w3id.org/react#</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Term status</dt>
+         <dd>stable</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/eep#Executor">executor</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasTotalProductionCapacity">
+      <h3>hasTotalProductionCapacity<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/react#hasTotalProductionCapacity</p>
+      <div class="comment">
+         <span class="markdown">The nominal total production capacity of a given production system</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/react#">https://w3id.org/react#</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Term status</dt>
+         <dd>stable</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#PVSystem" title="https://w3id.org/react#PVSystem">PV System</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasTotalStorageCapacity">
+      <h3>hasTotalStorageCapacity<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/react#hasTotalStorageCapacity</p>
+      <div class="comment">
+         <span class="markdown">The nominal total storage capacity of a given storage system</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/react#">https://w3id.org/react#</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Term status</dt>
+         <dd>stable</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Battery" title="https://w3id.org/react#Battery">Battery</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasVoltage">
+      <h3>hasVoltage<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/react#hasVoltage</p>
+      <div class="comment">
+         <span class="markdown">The nominal voltage of a Battery.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/react#">https://w3id.org/react#</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Term status</dt>
+         <dd>stable</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Battery" title="https://w3id.org/react#Battery">Battery</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSamplingMethod">
+      <h3>Sampling method of a given Execution<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/react#hasSamplingMethod</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/react#">https://w3id.org/react#</a>
+         </dd>
+      </dl>
+      <dl>
+         <dt>Term status</dt>
+         <dd>stable</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/eep#Execution">execution</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="namedindividuals">
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
    <ul class="hlist">
       <li>

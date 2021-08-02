@@ -3,17 +3,21 @@
      xml:base="https://w3id.org/react"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:ns="http://creativecommons.org/ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:bibo="http://purl.org/ontology/bibo/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:ns1="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:ns1="http://creativecommons.org/ns#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="https://w3id.org/react#">
-        <ns:license rdf:resource="https://creativecommons.org/licenses/by-nc/4.0/"/>
+    <owl:Ontology rdf:about="https://w3id.org/react">
+        <owl:imports rdf:resource="https://w3id.org/affectedBy"/>
+        <owl:imports rdf:resource="https://w3id.org/bot-0.3.2"/>
+        <owl:imports rdf:resource="https://w3id.org/eep"/>
+        <ns1:license rdf:resource="https://creativecommons.org/licenses/by-nc/4.0/"/>
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ignacio Lazaro &lt;mailto:ignacio.lazar@tekniker.es&gt;
 Nikola Tomasevic &lt;mailto:nikola.tomasevic@pupin.rs&gt;
 Marko Jelic &lt;mailto:marko.jelic@pupin.rs&gt;
@@ -29,8 +33,8 @@ The REACT ontology has been developed as part of the REACT project which has rec
         <terms:title xml:lang="en">The REACT Ontology.</terms:title>
         <bibo:status xml:lang="en">Work in Progress</bibo:status>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">react</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/react"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/react#"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -169,6 +173,238 @@ The REACT ontology has been developed as part of the REACT project which has rec
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/react#isManagedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/react#isManagedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/eep#Executor"/>
+        <rdfs:range rdf:resource="https://w3id.org/eep#Executor"/>
+        <rdfs:comment xml:lang="en">Relationship between an Executor and another Executor that manages it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/react#"/>
+        <rdfs:label xml:lang="en">isManagedBy</rdfs:label>
+        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/react#equipmentCategory -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/react#equipmentCategory">
+        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testing</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/react#hasAccessType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/react#hasAccessType">
+        <rdfs:domain rdf:resource="https://w3id.org/eep#Execution"/>
+        <rdfs:comment xml:lang="en">The type of acces of a given Execution</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/react#"/>
+        <rdfs:label xml:lang="en">hasAccessType</rdfs:label>
+        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testing</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/react#hasBatteryCapacity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/react#hasBatteryCapacity">
+        <rdfs:domain rdf:resource="https://w3id.org/react#Battery"/>
+        <rdfs:comment xml:lang="en">The nominal charge stored by a given Battery.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/react#"/>
+        <rdfs:label xml:lang="en">hasBatteryCapacity</rdfs:label>
+        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/react#hasDemandEnergyCarrier -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/react#hasDemandEnergyCarrier">
+        <rdfs:domain rdf:resource="https://w3id.org/bot#Space"/>
+        <rdfs:comment xml:lang="en">Energy carriers present in a given facility (bot:Space) as demand</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/react#"/>
+        <rdfs:label xml:lang="en">hasDemandEnergyCarrier</rdfs:label>
+        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/react#hasEnergy -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/react#hasEnergy">
+        <rdfs:domain rdf:resource="https://w3id.org/eep#Executor"/>
+        <rdfs:comment xml:lang="en">The nominal energy of a given Equipment (eep:Executor)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/react#"/>
+        <rdfs:label xml:lang="en">hasEnergy</rdfs:label>
+        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/react#hasGenerationEnergyCarrier -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/react#hasGenerationEnergyCarrier">
+        <rdfs:domain rdf:resource="https://w3id.org/bot#Space"/>
+        <rdfs:comment xml:lang="en">Energy carriers present in a given facility (bot:Space) as local generators</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/react#"/>
+        <rdfs:label xml:lang="en">hasGenerationEnergyCarrier</rdfs:label>
+        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/react#hasGridType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/react#hasGridType">
+        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testing</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/react#hasInstallationDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/react#hasInstallationDate">
+        <rdfs:domain rdf:resource="https://w3id.org/eep#Executor"/>
+        <rdfs:comment xml:lang="en">Date when a given Equipment (eep:Executor) was installed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/react#"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasInstallationDate</rdfs:label>
+        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/react#hasMeasurementIndex -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/react#hasMeasurementIndex">
+        <rdfs:domain rdf:resource="https://w3id.org/eep#Execution"/>
+        <rdfs:comment xml:lang="en">Measurement index of an Execution or a set of Executions. Measurement index for scalar values is set to 1. For vector values (e.g. 3-phase measurement), it is set to the corresponding value: 1,2,3…</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/react#"/>
+        <rdfs:label xml:lang="en">hasMeasurementIndex</rdfs:label>
+        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/react#hasModuleQuantity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/react#hasModuleQuantity">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/react#Battery"/>
+                    <rdf:Description rdf:about="https://w3id.org/react#PVSystem"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:comment xml:lang="en">The quantity of modules that composes a given energy storage or production system</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/react#"/>
+        <rdfs:label xml:lang="en">hasModuleQuantity</rdfs:label>
+        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/react#hasSamplingMethod -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/react#hasSamplingMethod">
+        <rdfs:domain rdf:resource="https://w3id.org/eep#Execution"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/react#"/>
+        <rdfs:label xml:lang="en">Sampling method of a given Execution</rdfs:label>
+        <rdfs:label xml:lang="en">hasSamplingMethod</rdfs:label>
+        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/react#hasTechnology -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/react#hasTechnology">
+        <rdfs:domain rdf:resource="https://w3id.org/eep#Executor"/>
+        <rdfs:comment xml:lang="en">Base technology of a given Equipment (eep:Executor)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/react#"/>
+        <rdfs:label xml:lang="en">hasTechnology</rdfs:label>
+        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/react#hasTotalProductionCapacity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/react#hasTotalProductionCapacity">
+        <rdfs:domain rdf:resource="https://w3id.org/react#PVSystem"/>
+        <rdfs:comment xml:lang="en">The nominal total production capacity of a given production system</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/react#"/>
+        <rdfs:label xml:lang="en">hasTotalProductionCapacity</rdfs:label>
+        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/react#hasTotalStorageCapacity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/react#hasTotalStorageCapacity">
+        <rdfs:domain rdf:resource="https://w3id.org/react#Battery"/>
+        <rdfs:comment xml:lang="en">The nominal total storage capacity of a given storage system</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/react#"/>
+        <rdfs:label xml:lang="en">hasTotalStorageCapacity</rdfs:label>
+        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/react#hasVoltage -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/react#hasVoltage">
+        <rdfs:domain rdf:resource="https://w3id.org/react#Battery"/>
+        <rdfs:comment xml:lang="en">The nominal voltage of a Battery.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/react#"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasVoltage</rdfs:label>
+        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -182,6 +418,37 @@ The REACT ontology has been developed as part of the REACT project which has rec
 
 
     <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+    
+
+
+    <!-- https://w3id.org/bot#Space -->
+
+
+    <owl:Class rdf:about="https://w3id.org/bot#Space"/>
+    
+
+
+    <!-- https://w3id.org/react#Battery -->
+
+
+    <owl:Class rdf:about="https://w3id.org/react#Battery">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eep#Executor"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/react#"/>
+        <rdfs:label xml:lang="en">Battery</rdfs:label>
+        <ns:term_status xml:lang="en">testing</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/react#PVSystem -->
+
+
+    <owl:Class rdf:about="https://w3id.org/react#PVSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eep#Executor"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/react#"/>
+        <rdfs:label xml:lang="en">PV System</rdfs:label>
+        <ns:term_status xml:lang="en">testing</ns:term_status>
+    </owl:Class>
     
 
 

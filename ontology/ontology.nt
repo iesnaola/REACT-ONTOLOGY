@@ -1,16 +1,19 @@
-<https://w3id.org/react#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/react#> <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by-nc/4.0/> .
-<https://w3id.org/react#> <http://purl.org/dc/terms/contributor> "Ignacio Lazaro <mailto:ignacio.lazar@tekniker.es>\r\nNikola Tomasevic <mailto:nikola.tomasevic@pupin.rs>\r\nMarko Jelic <mailto:marko.jelic@pupin.rs>\r\nDea Pujic <mailto:dea.pujic@pupin.rs>\r\nLluis Millet <mailto:lluis.millet.biosca@ise.fraunhofer.de>" .
-<https://w3id.org/react#> <http://purl.org/dc/terms/created> "2021-06-01" .
-<https://w3id.org/react#> <http://purl.org/dc/terms/creator> "Iker Esnaola-Gonzalez <mailto:iker.esnaola@tekniker.es>" .
-<https://w3id.org/react#> <http://purl.org/dc/terms/description> "The REACT ontology aims to represent all the necessary knowledge to support the avhievement of island energy independence through renewable energy generation and storage, a demand response platform, and promoting user engagement in a local energy community.\n\nThe REACT ontology has been developed as part of the REACT project which has received funding from the European Union\u2019s Horizon 2020 research and innovation programme under grant agreement no. 824395."@en .
-<https://w3id.org/react#> <http://purl.org/dc/terms/description> "The REACT Ontology" .
-<https://w3id.org/react#> <http://purl.org/dc/terms/issued> "2021-07-22" .
-<https://w3id.org/react#> <http://purl.org/dc/terms/title> "The REACT Ontology."@en .
-<https://w3id.org/react#> <http://purl.org/ontology/bibo/status> "Work in Progress"@en .
-<https://w3id.org/react#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "react" .
-<https://w3id.org/react#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/react> .
-<https://w3id.org/react#> <http://www.w3.org/2002/07/owl#versionInfo> "0.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/react> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/react> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/affectedBy> .
+<https://w3id.org/react> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/bot-0.3.2> .
+<https://w3id.org/react> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eep> .
+<https://w3id.org/react> <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by-nc/4.0/> .
+<https://w3id.org/react> <http://purl.org/dc/terms/contributor> "Ignacio Lazaro <mailto:ignacio.lazar@tekniker.es>\r\nNikola Tomasevic <mailto:nikola.tomasevic@pupin.rs>\r\nMarko Jelic <mailto:marko.jelic@pupin.rs>\r\nDea Pujic <mailto:dea.pujic@pupin.rs>\r\nLluis Millet <mailto:lluis.millet.biosca@ise.fraunhofer.de>" .
+<https://w3id.org/react> <http://purl.org/dc/terms/created> "2021-06-01" .
+<https://w3id.org/react> <http://purl.org/dc/terms/creator> "Iker Esnaola-Gonzalez <mailto:iker.esnaola@tekniker.es>" .
+<https://w3id.org/react> <http://purl.org/dc/terms/description> "The REACT ontology aims to represent all the necessary knowledge to support the avhievement of island energy independence through renewable energy generation and storage, a demand response platform, and promoting user engagement in a local energy community.\n\nThe REACT ontology has been developed as part of the REACT project which has received funding from the European Union\u2019s Horizon 2020 research and innovation programme under grant agreement no. 824395."@en .
+<https://w3id.org/react> <http://purl.org/dc/terms/description> "The REACT Ontology" .
+<https://w3id.org/react> <http://purl.org/dc/terms/issued> "2021-07-22" .
+<https://w3id.org/react> <http://purl.org/dc/terms/title> "The REACT Ontology."@en .
+<https://w3id.org/react> <http://purl.org/ontology/bibo/status> "Work in Progress"@en .
+<https://w3id.org/react> <http://purl.org/vocab/vann/preferredNamespacePrefix> "react" .
+<https://w3id.org/react> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/react#> .
+<https://w3id.org/react> <http://www.w3.org/2002/07/owl#versionInfo> "0.2"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # 
 # #################################################################
@@ -75,6 +78,154 @@
 # 
 # #################################################################
 # #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/react#isManagedBy
+<https://w3id.org/react#isManagedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/react#isManagedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eep#Executor> .
+<https://w3id.org/react#isManagedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eep#Executor> .
+<https://w3id.org/react#isManagedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an Executor and another Executor that manages it."@en .
+<https://w3id.org/react#isManagedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/react#> .
+<https://w3id.org/react#isManagedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isManagedBy"@en .
+<https://w3id.org/react#isManagedBy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/react#equipmentCategory
+<https://w3id.org/react#equipmentCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/react#equipmentCategory> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://w3id.org/react#hasAccessType
+<https://w3id.org/react#hasAccessType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/react#hasAccessType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eep#Execution> .
+<https://w3id.org/react#hasAccessType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of acces of a given Execution"@en .
+<https://w3id.org/react#hasAccessType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/react#> .
+<https://w3id.org/react#hasAccessType> <http://www.w3.org/2000/01/rdf-schema#label> "hasAccessType"@en .
+<https://w3id.org/react#hasAccessType> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://w3id.org/react#hasBatteryCapacity
+<https://w3id.org/react#hasBatteryCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/react#hasBatteryCapacity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/react#Battery> .
+<https://w3id.org/react#hasBatteryCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "The nominal charge stored by a given Battery."@en .
+<https://w3id.org/react#hasBatteryCapacity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/react#> .
+<https://w3id.org/react#hasBatteryCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "hasBatteryCapacity"@en .
+<https://w3id.org/react#hasBatteryCapacity> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/react#hasDemandEnergyCarrier
+<https://w3id.org/react#hasDemandEnergyCarrier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/react#hasDemandEnergyCarrier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Space> .
+<https://w3id.org/bot#Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/react#hasDemandEnergyCarrier> <http://www.w3.org/2000/01/rdf-schema#comment> "Energy carriers present in a given facility (bot:Space) as demand"@en .
+<https://w3id.org/react#hasDemandEnergyCarrier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/react#> .
+<https://w3id.org/react#hasDemandEnergyCarrier> <http://www.w3.org/2000/01/rdf-schema#label> "hasDemandEnergyCarrier"@en .
+<https://w3id.org/react#hasDemandEnergyCarrier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/react#hasEnergy
+<https://w3id.org/react#hasEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/react#hasEnergy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eep#Executor> .
+<https://w3id.org/react#hasEnergy> <http://www.w3.org/2000/01/rdf-schema#comment> "The nominal energy of a given Equipment (eep:Executor)"@en .
+<https://w3id.org/react#hasEnergy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/react#> .
+<https://w3id.org/react#hasEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "hasEnergy"@en .
+<https://w3id.org/react#hasEnergy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/react#hasGenerationEnergyCarrier
+<https://w3id.org/react#hasGenerationEnergyCarrier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/react#hasGenerationEnergyCarrier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Space> .
+<https://w3id.org/react#hasGenerationEnergyCarrier> <http://www.w3.org/2000/01/rdf-schema#comment> "Energy carriers present in a given facility (bot:Space) as local generators"@en .
+<https://w3id.org/react#hasGenerationEnergyCarrier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/react#> .
+<https://w3id.org/react#hasGenerationEnergyCarrier> <http://www.w3.org/2000/01/rdf-schema#label> "hasGenerationEnergyCarrier"@en .
+<https://w3id.org/react#hasGenerationEnergyCarrier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/react#hasGridType
+<https://w3id.org/react#hasGridType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/react#hasGridType> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://w3id.org/react#hasInstallationDate
+<https://w3id.org/react#hasInstallationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/react#hasInstallationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eep#Executor> .
+<https://w3id.org/react#hasInstallationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date when a given Equipment (eep:Executor) was installed."@en .
+<https://w3id.org/react#hasInstallationDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/react#> .
+<https://w3id.org/react#hasInstallationDate> <http://www.w3.org/2000/01/rdf-schema#label> "hasInstallationDate" .
+<https://w3id.org/react#hasInstallationDate> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/react#hasMeasurementIndex
+<https://w3id.org/react#hasMeasurementIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/react#hasMeasurementIndex> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eep#Execution> .
+<https://w3id.org/react#hasMeasurementIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "Measurement index of an Execution or a set of Executions. Measurement index for scalar values is set to 1. For vector values (e.g. 3-phase measurement), it is set to the corresponding value: 1,2,3\u2026"@en .
+<https://w3id.org/react#hasMeasurementIndex> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/react#> .
+<https://w3id.org/react#hasMeasurementIndex> <http://www.w3.org/2000/01/rdf-schema#label> "hasMeasurementIndex"@en .
+<https://w3id.org/react#hasMeasurementIndex> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/react#hasModuleQuantity
+<https://w3id.org/react#hasModuleQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/react#hasModuleQuantity> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/react#Battery> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/react#PVSystem> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/react#hasModuleQuantity> <http://www.w3.org/2000/01/rdf-schema#comment> "The quantity of modules that composes a given energy storage or production system"@en .
+<https://w3id.org/react#hasModuleQuantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/react#> .
+<https://w3id.org/react#hasModuleQuantity> <http://www.w3.org/2000/01/rdf-schema#label> "hasModuleQuantity"@en .
+<https://w3id.org/react#hasModuleQuantity> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/react#hasSamplingMethod
+<https://w3id.org/react#hasSamplingMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/react#hasSamplingMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eep#Execution> .
+<https://w3id.org/react#hasSamplingMethod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/react#> .
+<https://w3id.org/react#hasSamplingMethod> <http://www.w3.org/2000/01/rdf-schema#label> "Sampling method of a given Execution"@en .
+<https://w3id.org/react#hasSamplingMethod> <http://www.w3.org/2000/01/rdf-schema#label> "hasSamplingMethod"@en .
+<https://w3id.org/react#hasSamplingMethod> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/react#hasTechnology
+<https://w3id.org/react#hasTechnology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/react#hasTechnology> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eep#Executor> .
+<https://w3id.org/react#hasTechnology> <http://www.w3.org/2000/01/rdf-schema#comment> "Base technology of a given Equipment (eep:Executor)"@en .
+<https://w3id.org/react#hasTechnology> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/react#> .
+<https://w3id.org/react#hasTechnology> <http://www.w3.org/2000/01/rdf-schema#label> "hasTechnology"@en .
+<https://w3id.org/react#hasTechnology> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/react#hasTotalProductionCapacity
+<https://w3id.org/react#hasTotalProductionCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/react#hasTotalProductionCapacity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/react#PVSystem> .
+<https://w3id.org/react#hasTotalProductionCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "The nominal total production capacity of a given production system"@en .
+<https://w3id.org/react#hasTotalProductionCapacity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/react#> .
+<https://w3id.org/react#hasTotalProductionCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "hasTotalProductionCapacity"@en .
+<https://w3id.org/react#hasTotalProductionCapacity> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/react#hasTotalStorageCapacity
+<https://w3id.org/react#hasTotalStorageCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/react#hasTotalStorageCapacity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/react#Battery> .
+<https://w3id.org/react#hasTotalStorageCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "The nominal total storage capacity of a given storage system"@en .
+<https://w3id.org/react#hasTotalStorageCapacity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/react#> .
+<https://w3id.org/react#hasTotalStorageCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "hasTotalStorageCapacity"@en .
+<https://w3id.org/react#hasTotalStorageCapacity> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/react#hasVoltage
+<https://w3id.org/react#hasVoltage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/react#hasVoltage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/react#Battery> .
+<https://w3id.org/react#hasVoltage> <http://www.w3.org/2000/01/rdf-schema#comment> "The nominal voltage of a Battery."@en .
+<https://w3id.org/react#hasVoltage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/react#> .
+<https://w3id.org/react#hasVoltage> <http://www.w3.org/2000/01/rdf-schema#label> "hasVoltage" .
+<https://w3id.org/react#hasVoltage> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# 
+# 
+# #################################################################
+# #
 # #    Classes
 # #
 # #################################################################
@@ -82,6 +233,22 @@
 # 
 # http://purl.org/vocommons/voaf#Vocabulary
 <http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/bot#Space
+# 
+# https://w3id.org/react#Battery
+<https://w3id.org/react#Battery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/react#Battery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eep#Executor> .
+<https://w3id.org/react#Battery> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/react#> .
+<https://w3id.org/react#Battery> <http://www.w3.org/2000/01/rdf-schema#label> "Battery"@en .
+<https://w3id.org/react#Battery> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"@en .
+# 
+# https://w3id.org/react#PVSystem
+<https://w3id.org/react#PVSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/react#PVSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eep#Executor> .
+<https://w3id.org/react#PVSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/react#> .
+<https://w3id.org/react#PVSystem> <http://www.w3.org/2000/01/rdf-schema#label> "PV System"@en .
+<https://w3id.org/react#PVSystem> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"@en .
 # 
 # 
 # 
