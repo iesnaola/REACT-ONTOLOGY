@@ -24,12 +24,12 @@ Paulo Lissa &lt;mailto:paulo.lissa@nuigalway.ie&gt;</terms:contributor>
 
 The HPOnt has been developed as part of the REACT project which has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement no. 824395.</terms:description>
         <terms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Heat Pump Ontology</terms:description>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-08-06</terms:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-08-19</terms:issued>
         <terms:title xml:lang="en">The Heat Pump Ontology (HPOnt).</terms:title>
         <bibo:status xml:lang="en">Work in Progress</bibo:status>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hpont</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/hpont#"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -168,6 +168,46 @@ The HPOnt has been developed as part of the REACT project which has received fun
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/hpont#hasOperatingModeAvailable -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hpont#hasOperatingModeAvailable">
+        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPumpSystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/hpont#HeatPumpOperatingMode"/>
+        <rdfs:comment xml:lang="en">Operating modes available for the Heat Pump</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
+        <rdfs:label xml:lang="en">has Operating Mode Available</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testing</ns1:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/hpont#hasTechnology -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hpont#hasTechnology">
+        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPumpSystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/hpont#HeatPumpTechnology"/>
+        <rdfs:comment xml:lang="en">Base technology of a given Heat Pump</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
+        <rdfs:label xml:lang="en">has Technology</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testing</ns1:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Data properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -181,7 +221,7 @@ The HPOnt has been developed as part of the REACT project which has received fun
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/hpont#hasBufferStorageVolume">
-        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPump"/>
+        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPumpSystem"/>
         <rdfs:comment xml:lang="en">Buffer storage volume of the Heat Pump. Buffer storage is thermal energy storage using a tank for the circulating heat transfer fluid of the Heat Pump</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
         <rdfs:label xml:lang="en">has Buffer Storage Volume</rdfs:label>
@@ -194,7 +234,7 @@ The HPOnt has been developed as part of the REACT project which has received fun
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/hpont#hasDHWStorageVolume">
-        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPump"/>
+        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPumpSystem"/>
         <rdfs:comment xml:lang="en">DHW (Domestic Hot Water) storage volume of the Heat Pump. DHW storage is a tank that contains clean potable water for household hot water consumption</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
         <rdfs:label xml:lang="en">has DHW Storage Volume</rdfs:label>
@@ -207,7 +247,7 @@ The HPOnt has been developed as part of the REACT project which has received fun
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/hpont#hasNominalCoolingCapacity">
-        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPump"/>
+        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPumpSystem"/>
         <rdfs:comment xml:lang="en">Nominal cooling capacity of the Heat Pump</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
         <rdfs:label xml:lang="en">has Nominal Cooling Capacity</rdfs:label>
@@ -220,7 +260,7 @@ The HPOnt has been developed as part of the REACT project which has received fun
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/hpont#hasNominalHeatingCapacity">
-        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPump"/>
+        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPumpSystem"/>
         <rdfs:comment xml:lang="en">Nominal heating capacity of the Heat Pump</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
         <rdfs:label xml:lang="en">has Nominal Heating Capacity</rdfs:label>
@@ -233,7 +273,7 @@ The HPOnt has been developed as part of the REACT project which has received fun
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/hpont#hasNominalPowerConsumptionInCoolingMode">
-        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPump"/>
+        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPumpSystem"/>
         <rdfs:comment xml:lang="en">Nominal power consumption of the Heat Pump when it is in cooling mode</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
         <rdfs:label xml:lang="en">has Nominal Power Consumption In Cooling Mode</rdfs:label>
@@ -246,7 +286,7 @@ The HPOnt has been developed as part of the REACT project which has received fun
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/hpont#hasNominalPowerConsumptionInHeatingMode">
-        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPump"/>
+        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPumpSystem"/>
         <rdfs:comment xml:lang="en">Nominal power consumption of the Heat Pump when it is in heating mode</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
         <rdfs:label xml:lang="en">has Nominal Power Consumption In Heating Mode</rdfs:label>
@@ -259,7 +299,7 @@ The HPOnt has been developed as part of the REACT project which has received fun
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/hpont#hasNumberOfIndoorUnits">
-        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPump"/>
+        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPumpSystem"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">Number of indoor units that the Heat Pump has</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
@@ -273,7 +313,7 @@ The HPOnt has been developed as part of the REACT project which has received fun
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/hpont#hasNumberOfOutdoorUnits">
-        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPump"/>
+        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPumpSystem"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">Number of outdoor units that the Heat Pump has</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
@@ -283,24 +323,11 @@ The HPOnt has been developed as part of the REACT project which has received fun
     
 
 
-    <!-- https://w3id.org/hpont#hasOperatingModeAvailable -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/hpont#hasOperatingModeAvailable">
-        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPump"/>
-        <rdfs:comment xml:lang="en">Operating modes available for the Heat Pump</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
-        <rdfs:label xml:lang="en">has Operating Mode Available</rdfs:label>
-        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testing</ns1:term_status>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/hpont#hasOutdoorModelUnitName -->
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/hpont#hasOutdoorModelUnitName">
-        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPump"/>
+        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPumpSystem"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Name of the oudoor model unit</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
@@ -310,14 +337,14 @@ The HPOnt has been developed as part of the REACT project which has received fun
     
 
 
-    <!-- https://w3id.org/hpont#hasTechnology -->
+    <!-- https://w3id.org/hpont#hasPowerSupplyType -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/hpont#hasTechnology">
-        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPump"/>
-        <rdfs:comment xml:lang="en">Base technology of a given Heat Pump</rdfs:comment>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/hpont#hasPowerSupplyType">
+        <rdfs:domain rdf:resource="https://w3id.org/hpont#HeatPumpSystem"/>
+        <rdfs:comment xml:lang="en">Electric power supply type of the Heat Pump System</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
-        <rdfs:label xml:lang="en">has Technology</rdfs:label>
+        <rdfs:label xml:lang="en">has Power Supply Type</rdfs:label>
         <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testing</ns1:term_status>
     </owl:DatatypeProperty>
     
@@ -342,48 +369,50 @@ The HPOnt has been developed as part of the REACT project which has received fun
     
 
 
-    <!-- https://w3id.org/hpont#HeatPump -->
+    <!-- https://w3id.org/hpont#HeatPumpOperatingMode -->
 
 
-    <owl:Class rdf:about="https://w3id.org/hpont#HeatPump">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/hpont#SinglePhasePowerSupplyHeatPump"/>
-                    <rdf:Description rdf:about="https://w3id.org/hpont#ThreePhasePowerSupplyHeatPump"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:comment xml:lang="en">A device that transfers heat from a colder area to a hotter area by using mechanical energy</rdfs:comment>
+    <owl:Class rdf:about="https://w3id.org/hpont#HeatPumpOperatingMode">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/hpont#hasOperatingModeAvailable"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/hpont#HeatPumpOperatingMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/hpont#hasTechnology"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/hpont#HeatPumpTechnology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The operating mode of a given Heat Pump system</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
-        <rdfs:label xml:lang="en">Heat Pump</rdfs:label>
-        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/hpont#SinglePhasePowerSupplyHeatPump -->
-
-
-    <owl:Class rdf:about="https://w3id.org/hpont#SinglePhasePowerSupplyHeatPump">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/hpont#HeatPump"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/hpont#ThreePhasePowerSupplyHeatPump"/>
-        <rdfs:comment xml:lang="en">Heat Pump with single phase electric power supply.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
-        <rdfs:label xml:lang="en">Single Phase Power Supply Heat Pump</rdfs:label>
+        <rdfs:label xml:lang="en">Heat Pump Operating Mode</rdfs:label>
         <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testing</ns1:term_status>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/hpont#ThreePhasePowerSupplyHeatPump -->
+    <!-- https://w3id.org/hpont#HeatPumpSystem -->
 
 
-    <owl:Class rdf:about="https://w3id.org/hpont#ThreePhasePowerSupplyHeatPump">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/hpont#HeatPump"/>
-        <rdfs:comment xml:lang="en">Heat Pump with three phase electric power supply. They are normaly the larger heat pumps.</rdfs:comment>
+    <owl:Class rdf:about="https://w3id.org/hpont#HeatPumpSystem">
+        <rdfs:comment xml:lang="en">A system composed of one or many devices that transfer heat from a colder area to a hotter area by using mechanical energy</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
-        <rdfs:label xml:lang="en">Three Phase Power Supply Heat Pump</rdfs:label>
+        <rdfs:label xml:lang="en">Heat Pump System</rdfs:label>
+        <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns1:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/hpont#HeatPumpTechnology -->
+
+
+    <owl:Class rdf:about="https://w3id.org/hpont#HeatPumpTechnology">
+        <rdfs:comment xml:lang="en">The base technology of a given Heat Pump system</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
+        <rdfs:label xml:lang="en">Heat Pump Technology</rdfs:label>
         <ns1:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testing</ns1:term_status>
     </owl:Class>
     
@@ -414,6 +443,7 @@ The HPOnt has been developed as part of the REACT project which has received fun
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/hpont#ata">
+        <rdf:type rdf:resource="https://w3id.org/hpont#HeatPumpTechnology"/>
         <bibo:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testing</bibo:status>
         <rdfs:comment xml:lang="en">Air-to-air Heat Pump technology.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
@@ -426,6 +456,7 @@ The HPOnt has been developed as part of the REACT project which has received fun
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/hpont#atw">
+        <rdf:type rdf:resource="https://w3id.org/hpont#HeatPumpTechnology"/>
         <bibo:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testing</bibo:status>
         <rdfs:comment xml:lang="en">Air-to-water Heat Pump technology</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
@@ -438,6 +469,7 @@ The HPOnt has been developed as part of the REACT project which has received fun
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/hpont#dhwHeatingMode">
+        <rdf:type rdf:resource="https://w3id.org/hpont#HeatPumpOperatingMode"/>
         <bibo:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testing</bibo:status>
         <rdfs:comment xml:lang="en">DHW heating operation mode of the Heat Pump</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
@@ -450,6 +482,7 @@ The HPOnt has been developed as part of the REACT project which has received fun
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/hpont#spaceCoolingMode">
+        <rdf:type rdf:resource="https://w3id.org/hpont#HeatPumpOperatingMode"/>
         <bibo:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testing</bibo:status>
         <rdfs:comment xml:lang="en">Space cooling operation mode of the Heat Pump</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
@@ -462,11 +495,31 @@ The HPOnt has been developed as part of the REACT project which has received fun
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/hpont#spaceHeatingMode">
+        <rdf:type rdf:resource="https://w3id.org/hpont#HeatPumpOperatingMode"/>
         <bibo:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testing</bibo:status>
         <rdfs:comment xml:lang="en">Space heating operation mode of the Heat Pump</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/hpont#"/>
         <rdfs:label xml:lang="en">Space heating mode</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/hpont#ata"/>
+            <rdf:Description rdf:about="https://w3id.org/hpont#atw"/>
+        </owl:distinctMembers>
+    </rdf:Description>
 </rdf:RDF>
 
 

@@ -14,16 +14,16 @@ James Freeman <mailto:j.freeman@uk.merce.mee.com>
 Paulo Lissa <mailto:paulo.lissa@nuigalway.ie>"""^^xsd:string ;
                           <http://purl.org/dc/terms/created> "2021-08-04"^^xsd:string ;
                           <http://purl.org/dc/terms/creator> "Iker Esnaola-Gonzalez <mailto:iker.esnaola@tekniker.es>"^^xsd:string ;
-                          <http://purl.org/dc/terms/description> """The Heat Pump Ontology (HPOnt) aims to formalize and represent all the relevant information of Heat Pumps.
+                          <http://purl.org/dc/terms/description> "The Heat Pump Ontology"^^xsd:string ,
+                                                                 """The Heat Pump Ontology (HPOnt) aims to formalize and represent all the relevant information of Heat Pumps.
 
-The HPOnt has been developed as part of the REACT project which has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement no. 824395."""@en ,
-                                                                 "The Heat Pump Ontology"^^xsd:string ;
-                          <http://purl.org/dc/terms/issued> "2021-08-06"^^xsd:string ;
+The HPOnt has been developed as part of the REACT project which has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement no. 824395."""@en ;
+                          <http://purl.org/dc/terms/issued> "2021-08-19"^^xsd:string ;
                           <http://purl.org/dc/terms/title> "The Heat Pump Ontology (HPOnt)."@en ;
                           <http://purl.org/ontology/bibo/status> "Work in Progress"@en ;
                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "hpont"^^xsd:string ;
                           <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
-                          owl:versionInfo 0.1 .
+                          owl:versionInfo 0.2 .
 
 #################################################################
 #    Annotation properties
@@ -98,12 +98,36 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 
 
 #################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/hpont#hasOperatingModeAvailable
+:hasOperatingModeAvailable rdf:type owl:ObjectProperty ;
+                           rdfs:domain :HeatPumpSystem ;
+                           rdfs:range :HeatPumpOperatingMode ;
+                           rdfs:comment "Operating modes available for the Heat Pump"@en ;
+                           rdfs:isDefinedBy : ;
+                           rdfs:label "has Operating Mode Available"@en ;
+                           <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"^^xsd:string .
+
+
+###  https://w3id.org/hpont#hasTechnology
+:hasTechnology rdf:type owl:ObjectProperty ;
+               rdfs:domain :HeatPumpSystem ;
+               rdfs:range :HeatPumpTechnology ;
+               rdfs:comment "Base technology of a given Heat Pump"@en ;
+               rdfs:isDefinedBy : ;
+               rdfs:label "has Technology"@en ;
+               <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"^^xsd:string .
+
+
+#################################################################
 #    Data properties
 #################################################################
 
 ###  https://w3id.org/hpont#hasBufferStorageVolume
 :hasBufferStorageVolume rdf:type owl:DatatypeProperty ;
-                        rdfs:domain :HeatPump ;
+                        rdfs:domain :HeatPumpSystem ;
                         rdfs:comment "Buffer storage volume of the Heat Pump. Buffer storage is thermal energy storage using a tank for the circulating heat transfer fluid of the Heat Pump"@en ;
                         rdfs:isDefinedBy : ;
                         rdfs:label "has Buffer Storage Volume"@en ;
@@ -112,7 +136,7 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/hpont#hasDHWStorageVolume
 :hasDHWStorageVolume rdf:type owl:DatatypeProperty ;
-                     rdfs:domain :HeatPump ;
+                     rdfs:domain :HeatPumpSystem ;
                      rdfs:comment "DHW (Domestic Hot Water) storage volume of the Heat Pump. DHW storage is a tank that contains clean potable water for household hot water consumption"@en ;
                      rdfs:isDefinedBy : ;
                      rdfs:label "has DHW Storage Volume"@en ;
@@ -121,7 +145,7 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/hpont#hasNominalCoolingCapacity
 :hasNominalCoolingCapacity rdf:type owl:DatatypeProperty ;
-                           rdfs:domain :HeatPump ;
+                           rdfs:domain :HeatPumpSystem ;
                            rdfs:comment "Nominal cooling capacity of the Heat Pump"@en ;
                            rdfs:isDefinedBy : ;
                            rdfs:label "has Nominal Cooling Capacity"@en ;
@@ -130,7 +154,7 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/hpont#hasNominalHeatingCapacity
 :hasNominalHeatingCapacity rdf:type owl:DatatypeProperty ;
-                           rdfs:domain :HeatPump ;
+                           rdfs:domain :HeatPumpSystem ;
                            rdfs:comment "Nominal heating capacity of the Heat Pump"@en ;
                            rdfs:isDefinedBy : ;
                            rdfs:label "has Nominal Heating Capacity"@en ;
@@ -139,7 +163,7 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/hpont#hasNominalPowerConsumptionInCoolingMode
 :hasNominalPowerConsumptionInCoolingMode rdf:type owl:DatatypeProperty ;
-                                         rdfs:domain :HeatPump ;
+                                         rdfs:domain :HeatPumpSystem ;
                                          rdfs:comment "Nominal power consumption of the Heat Pump when it is in cooling mode"@en ;
                                          rdfs:isDefinedBy : ;
                                          rdfs:label "has Nominal Power Consumption In Cooling Mode"@en ;
@@ -148,7 +172,7 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/hpont#hasNominalPowerConsumptionInHeatingMode
 :hasNominalPowerConsumptionInHeatingMode rdf:type owl:DatatypeProperty ;
-                                         rdfs:domain :HeatPump ;
+                                         rdfs:domain :HeatPumpSystem ;
                                          rdfs:comment "Nominal power consumption of the Heat Pump when it is in heating mode"@en ;
                                          rdfs:isDefinedBy : ;
                                          rdfs:label "has Nominal Power Consumption In Heating Mode"@en ;
@@ -157,7 +181,7 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/hpont#hasNumberOfIndoorUnits
 :hasNumberOfIndoorUnits rdf:type owl:DatatypeProperty ;
-                        rdfs:domain :HeatPump ;
+                        rdfs:domain :HeatPumpSystem ;
                         rdfs:range xsd:integer ;
                         rdfs:comment "Number of indoor units that the Heat Pump has"@en ;
                         rdfs:isDefinedBy : ;
@@ -167,7 +191,7 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/hpont#hasNumberOfOutdoorUnits
 :hasNumberOfOutdoorUnits rdf:type owl:DatatypeProperty ;
-                         rdfs:domain :HeatPump ;
+                         rdfs:domain :HeatPumpSystem ;
                          rdfs:range xsd:integer ;
                          rdfs:comment "Number of outdoor units that the Heat Pump has"@en ;
                          rdfs:isDefinedBy : ;
@@ -175,18 +199,9 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
                          <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"^^xsd:string .
 
 
-###  https://w3id.org/hpont#hasOperatingModeAvailable
-:hasOperatingModeAvailable rdf:type owl:DatatypeProperty ;
-                           rdfs:domain :HeatPump ;
-                           rdfs:comment "Operating modes available for the Heat Pump"@en ;
-                           rdfs:isDefinedBy : ;
-                           rdfs:label "has Operating Mode Available"@en ;
-                           <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"^^xsd:string .
-
-
 ###  https://w3id.org/hpont#hasOutdoorModelUnitName
 :hasOutdoorModelUnitName rdf:type owl:DatatypeProperty ;
-                         rdfs:domain :HeatPump ;
+                         rdfs:domain :HeatPumpSystem ;
                          rdfs:range xsd:string ;
                          rdfs:comment "Name of the oudoor model unit"@en ;
                          rdfs:isDefinedBy : ;
@@ -194,13 +209,13 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
                          <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"^^xsd:string .
 
 
-###  https://w3id.org/hpont#hasTechnology
-:hasTechnology rdf:type owl:DatatypeProperty ;
-               rdfs:domain :HeatPump ;
-               rdfs:comment "Base technology of a given Heat Pump"@en ;
-               rdfs:isDefinedBy : ;
-               rdfs:label "has Technology"@en ;
-               <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"^^xsd:string .
+###  https://w3id.org/hpont#hasPowerSupplyType
+:hasPowerSupplyType rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :HeatPumpSystem ;
+                    rdfs:comment "Electric power supply type of the Heat Pump System"@en ;
+                    rdfs:isDefinedBy : ;
+                    rdfs:label "has Power Supply Type"@en ;
+                    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 
 
 #################################################################
@@ -211,36 +226,37 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 <http://purl.org/vocommons/voaf#Vocabulary> rdf:type owl:Class .
 
 
-###  https://w3id.org/hpont#HeatPump
-:HeatPump rdf:type owl:Class ;
-          owl:equivalentClass [ rdf:type owl:Class ;
-                                owl:unionOf ( :SinglePhasePowerSupplyHeatPump
-                                              :ThreePhasePowerSupplyHeatPump
-                                            )
-                              ] ;
-          rdfs:comment "A device that transfers heat from a colder area to a hotter area by using mechanical energy"@en ;
-          rdfs:isDefinedBy : ;
-          rdfs:label "Heat Pump"@en ;
-          <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+###  https://w3id.org/hpont#HeatPumpOperatingMode
+:HeatPumpOperatingMode rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasOperatingModeAvailable ;
+                                         owl:someValuesFrom :HeatPumpOperatingMode
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasTechnology ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass :HeatPumpTechnology
+                                       ] ;
+                       rdfs:comment "The operating mode of a given Heat Pump system"@en ;
+                       rdfs:isDefinedBy : ;
+                       rdfs:label "Heat Pump Operating Mode"@en ;
+                       <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 
 
-###  https://w3id.org/hpont#SinglePhasePowerSupplyHeatPump
-:SinglePhasePowerSupplyHeatPump rdf:type owl:Class ;
-                                rdfs:subClassOf :HeatPump ;
-                                owl:disjointWith :ThreePhasePowerSupplyHeatPump ;
-                                rdfs:comment "Heat Pump with single phase electric power supply."@en ;
-                                rdfs:isDefinedBy : ;
-                                rdfs:label "Single Phase Power Supply Heat Pump"@en ;
-                                <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"^^xsd:string .
+###  https://w3id.org/hpont#HeatPumpSystem
+:HeatPumpSystem rdf:type owl:Class ;
+                rdfs:comment "A system composed of one or many devices that transfer heat from a colder area to a hotter area by using mechanical energy"@en ;
+                rdfs:isDefinedBy : ;
+                rdfs:label "Heat Pump System"@en ;
+                <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
-###  https://w3id.org/hpont#ThreePhasePowerSupplyHeatPump
-:ThreePhasePowerSupplyHeatPump rdf:type owl:Class ;
-                               rdfs:subClassOf :HeatPump ;
-                               rdfs:comment "Heat Pump with three phase electric power supply. They are normaly the larger heat pumps."@en ;
-                               rdfs:isDefinedBy : ;
-                               rdfs:label "Three Phase Power Supply Heat Pump"@en ;
-                               <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"^^xsd:string .
+###  https://w3id.org/hpont#HeatPumpTechnology
+:HeatPumpTechnology rdf:type owl:Class ;
+                    rdfs:comment "The base technology of a given Heat Pump system"@en ;
+                    rdfs:isDefinedBy : ;
+                    rdfs:label "Heat Pump Technology"@en ;
+                    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 
 
 #################################################################
@@ -253,7 +269,8 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/hpont#ata
-:ata rdf:type owl:NamedIndividual ;
+:ata rdf:type owl:NamedIndividual ,
+              :HeatPumpTechnology ;
      <http://purl.org/ontology/bibo/status> "testing"^^xsd:string ;
      rdfs:comment "Air-to-air Heat Pump technology."@en ;
      rdfs:isDefinedBy : ;
@@ -261,7 +278,8 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/hpont#atw
-:atw rdf:type owl:NamedIndividual ;
+:atw rdf:type owl:NamedIndividual ,
+              :HeatPumpTechnology ;
      <http://purl.org/ontology/bibo/status> "testing"^^xsd:string ;
      rdfs:comment "Air-to-water Heat Pump technology"@en ;
      rdfs:isDefinedBy : ;
@@ -269,7 +287,8 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/hpont#dhwHeatingMode
-:dhwHeatingMode rdf:type owl:NamedIndividual ;
+:dhwHeatingMode rdf:type owl:NamedIndividual ,
+                         :HeatPumpOperatingMode ;
                 <http://purl.org/ontology/bibo/status> "testing"^^xsd:string ;
                 rdfs:comment "DHW heating operation mode of the Heat Pump"@en ;
                 rdfs:isDefinedBy : ;
@@ -277,7 +296,8 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/hpont#spaceCoolingMode
-:spaceCoolingMode rdf:type owl:NamedIndividual ;
+:spaceCoolingMode rdf:type owl:NamedIndividual ,
+                           :HeatPumpOperatingMode ;
                   <http://purl.org/ontology/bibo/status> "testing"^^xsd:string ;
                   rdfs:comment "Space cooling operation mode of the Heat Pump"@en ;
                   rdfs:isDefinedBy : ;
@@ -285,11 +305,23 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/hpont#spaceHeatingMode
-:spaceHeatingMode rdf:type owl:NamedIndividual ;
+:spaceHeatingMode rdf:type owl:NamedIndividual ,
+                           :HeatPumpOperatingMode ;
                   <http://purl.org/ontology/bibo/status> "testing"^^xsd:string ;
                   rdfs:comment "Space heating operation mode of the Heat Pump"@en ;
                   rdfs:isDefinedBy : ;
                   rdfs:label "Space heating mode"@en .
 
 
-###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :ata
+                        :atw
+                      )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

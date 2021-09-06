@@ -5,12 +5,12 @@
 <https://w3id.org/hpont> <http://purl.org/dc/terms/creator> "Iker Esnaola-Gonzalez <mailto:iker.esnaola@tekniker.es>" .
 <https://w3id.org/hpont> <http://purl.org/dc/terms/description> "The Heat Pump Ontology (HPOnt) aims to formalize and represent all the relevant information of Heat Pumps.\n\nThe HPOnt has been developed as part of the REACT project which has received funding from the European Union\u2019s Horizon 2020 research and innovation programme under grant agreement no. 824395."@en .
 <https://w3id.org/hpont> <http://purl.org/dc/terms/description> "The Heat Pump Ontology" .
-<https://w3id.org/hpont> <http://purl.org/dc/terms/issued> "2021-08-06" .
+<https://w3id.org/hpont> <http://purl.org/dc/terms/issued> "2021-08-19" .
 <https://w3id.org/hpont> <http://purl.org/dc/terms/title> "The Heat Pump Ontology (HPOnt)."@en .
 <https://w3id.org/hpont> <http://purl.org/ontology/bibo/status> "Work in Progress"@en .
 <https://w3id.org/hpont> <http://purl.org/vocab/vann/preferredNamespacePrefix> "hpont" .
 <https://w3id.org/hpont> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/hpont#> .
-<https://w3id.org/hpont> <http://www.w3.org/2002/07/owl#versionInfo> "0.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/hpont> <http://www.w3.org/2002/07/owl#versionInfo> "0.2"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # 
 # #################################################################
@@ -75,6 +75,33 @@
 # 
 # #################################################################
 # #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/hpont#hasOperatingModeAvailable
+<https://w3id.org/hpont#hasOperatingModeAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/hpont#hasOperatingModeAvailable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPumpSystem> .
+<https://w3id.org/hpont#hasOperatingModeAvailable> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/hpont#HeatPumpOperatingMode> .
+<https://w3id.org/hpont#hasOperatingModeAvailable> <http://www.w3.org/2000/01/rdf-schema#comment> "Operating modes available for the Heat Pump"@en .
+<https://w3id.org/hpont#hasOperatingModeAvailable> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
+<https://w3id.org/hpont#hasOperatingModeAvailable> <http://www.w3.org/2000/01/rdf-schema#label> "has Operating Mode Available"@en .
+<https://w3id.org/hpont#hasOperatingModeAvailable> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# https://w3id.org/hpont#hasTechnology
+<https://w3id.org/hpont#hasTechnology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/hpont#hasTechnology> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPumpSystem> .
+<https://w3id.org/hpont#hasTechnology> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/hpont#HeatPumpTechnology> .
+<https://w3id.org/hpont#hasTechnology> <http://www.w3.org/2000/01/rdf-schema#comment> "Base technology of a given Heat Pump"@en .
+<https://w3id.org/hpont#hasTechnology> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
+<https://w3id.org/hpont#hasTechnology> <http://www.w3.org/2000/01/rdf-schema#label> "has Technology"@en .
+<https://w3id.org/hpont#hasTechnology> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# 
+# 
+# 
+# #################################################################
+# #
 # #    Data properties
 # #
 # #################################################################
@@ -82,7 +109,7 @@
 # 
 # https://w3id.org/hpont#hasBufferStorageVolume
 <https://w3id.org/hpont#hasBufferStorageVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/hpont#hasBufferStorageVolume> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPump> .
+<https://w3id.org/hpont#hasBufferStorageVolume> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPumpSystem> .
 <https://w3id.org/hpont#hasBufferStorageVolume> <http://www.w3.org/2000/01/rdf-schema#comment> "Buffer storage volume of the Heat Pump. Buffer storage is thermal energy storage using a tank for the circulating heat transfer fluid of the Heat Pump"@en .
 <https://w3id.org/hpont#hasBufferStorageVolume> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
 <https://w3id.org/hpont#hasBufferStorageVolume> <http://www.w3.org/2000/01/rdf-schema#label> "has Buffer Storage Volume"@en .
@@ -90,7 +117,7 @@
 # 
 # https://w3id.org/hpont#hasDHWStorageVolume
 <https://w3id.org/hpont#hasDHWStorageVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/hpont#hasDHWStorageVolume> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPump> .
+<https://w3id.org/hpont#hasDHWStorageVolume> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPumpSystem> .
 <https://w3id.org/hpont#hasDHWStorageVolume> <http://www.w3.org/2000/01/rdf-schema#comment> "DHW (Domestic Hot Water) storage volume of the Heat Pump. DHW storage is a tank that contains clean potable water for household hot water consumption"@en .
 <https://w3id.org/hpont#hasDHWStorageVolume> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
 <https://w3id.org/hpont#hasDHWStorageVolume> <http://www.w3.org/2000/01/rdf-schema#label> "has DHW Storage Volume"@en .
@@ -98,7 +125,7 @@
 # 
 # https://w3id.org/hpont#hasNominalCoolingCapacity
 <https://w3id.org/hpont#hasNominalCoolingCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/hpont#hasNominalCoolingCapacity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPump> .
+<https://w3id.org/hpont#hasNominalCoolingCapacity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPumpSystem> .
 <https://w3id.org/hpont#hasNominalCoolingCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "Nominal cooling capacity of the Heat Pump"@en .
 <https://w3id.org/hpont#hasNominalCoolingCapacity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
 <https://w3id.org/hpont#hasNominalCoolingCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "has Nominal Cooling Capacity"@en .
@@ -106,7 +133,7 @@
 # 
 # https://w3id.org/hpont#hasNominalHeatingCapacity
 <https://w3id.org/hpont#hasNominalHeatingCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/hpont#hasNominalHeatingCapacity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPump> .
+<https://w3id.org/hpont#hasNominalHeatingCapacity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPumpSystem> .
 <https://w3id.org/hpont#hasNominalHeatingCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "Nominal heating capacity of the Heat Pump"@en .
 <https://w3id.org/hpont#hasNominalHeatingCapacity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
 <https://w3id.org/hpont#hasNominalHeatingCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "has Nominal Heating Capacity"@en .
@@ -114,7 +141,7 @@
 # 
 # https://w3id.org/hpont#hasNominalPowerConsumptionInCoolingMode
 <https://w3id.org/hpont#hasNominalPowerConsumptionInCoolingMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/hpont#hasNominalPowerConsumptionInCoolingMode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPump> .
+<https://w3id.org/hpont#hasNominalPowerConsumptionInCoolingMode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPumpSystem> .
 <https://w3id.org/hpont#hasNominalPowerConsumptionInCoolingMode> <http://www.w3.org/2000/01/rdf-schema#comment> "Nominal power consumption of the Heat Pump when it is in cooling mode"@en .
 <https://w3id.org/hpont#hasNominalPowerConsumptionInCoolingMode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
 <https://w3id.org/hpont#hasNominalPowerConsumptionInCoolingMode> <http://www.w3.org/2000/01/rdf-schema#label> "has Nominal Power Consumption In Cooling Mode"@en .
@@ -122,7 +149,7 @@
 # 
 # https://w3id.org/hpont#hasNominalPowerConsumptionInHeatingMode
 <https://w3id.org/hpont#hasNominalPowerConsumptionInHeatingMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/hpont#hasNominalPowerConsumptionInHeatingMode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPump> .
+<https://w3id.org/hpont#hasNominalPowerConsumptionInHeatingMode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPumpSystem> .
 <https://w3id.org/hpont#hasNominalPowerConsumptionInHeatingMode> <http://www.w3.org/2000/01/rdf-schema#comment> "Nominal power consumption of the Heat Pump when it is in heating mode"@en .
 <https://w3id.org/hpont#hasNominalPowerConsumptionInHeatingMode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
 <https://w3id.org/hpont#hasNominalPowerConsumptionInHeatingMode> <http://www.w3.org/2000/01/rdf-schema#label> "has Nominal Power Consumption In Heating Mode"@en .
@@ -130,7 +157,7 @@
 # 
 # https://w3id.org/hpont#hasNumberOfIndoorUnits
 <https://w3id.org/hpont#hasNumberOfIndoorUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/hpont#hasNumberOfIndoorUnits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPump> .
+<https://w3id.org/hpont#hasNumberOfIndoorUnits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPumpSystem> .
 <https://w3id.org/hpont#hasNumberOfIndoorUnits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 <https://w3id.org/hpont#hasNumberOfIndoorUnits> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of indoor units that the Heat Pump has"@en .
 <https://w3id.org/hpont#hasNumberOfIndoorUnits> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
@@ -139,37 +166,29 @@
 # 
 # https://w3id.org/hpont#hasNumberOfOutdoorUnits
 <https://w3id.org/hpont#hasNumberOfOutdoorUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/hpont#hasNumberOfOutdoorUnits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPump> .
+<https://w3id.org/hpont#hasNumberOfOutdoorUnits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPumpSystem> .
 <https://w3id.org/hpont#hasNumberOfOutdoorUnits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 <https://w3id.org/hpont#hasNumberOfOutdoorUnits> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of outdoor units that the Heat Pump has"@en .
 <https://w3id.org/hpont#hasNumberOfOutdoorUnits> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
 <https://w3id.org/hpont#hasNumberOfOutdoorUnits> <http://www.w3.org/2000/01/rdf-schema#label> "has Number Of Outdoor Units"@en .
 <https://w3id.org/hpont#hasNumberOfOutdoorUnits> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 # 
-# https://w3id.org/hpont#hasOperatingModeAvailable
-<https://w3id.org/hpont#hasOperatingModeAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/hpont#hasOperatingModeAvailable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPump> .
-<https://w3id.org/hpont#hasOperatingModeAvailable> <http://www.w3.org/2000/01/rdf-schema#comment> "Operating modes available for the Heat Pump"@en .
-<https://w3id.org/hpont#hasOperatingModeAvailable> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
-<https://w3id.org/hpont#hasOperatingModeAvailable> <http://www.w3.org/2000/01/rdf-schema#label> "has Operating Mode Available"@en .
-<https://w3id.org/hpont#hasOperatingModeAvailable> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-# 
 # https://w3id.org/hpont#hasOutdoorModelUnitName
 <https://w3id.org/hpont#hasOutdoorModelUnitName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/hpont#hasOutdoorModelUnitName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPump> .
+<https://w3id.org/hpont#hasOutdoorModelUnitName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPumpSystem> .
 <https://w3id.org/hpont#hasOutdoorModelUnitName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/hpont#hasOutdoorModelUnitName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the oudoor model unit"@en .
 <https://w3id.org/hpont#hasOutdoorModelUnitName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
 <https://w3id.org/hpont#hasOutdoorModelUnitName> <http://www.w3.org/2000/01/rdf-schema#label> "has Outdoor Model Unit Name"@en .
 <https://w3id.org/hpont#hasOutdoorModelUnitName> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 # 
-# https://w3id.org/hpont#hasTechnology
-<https://w3id.org/hpont#hasTechnology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/hpont#hasTechnology> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPump> .
-<https://w3id.org/hpont#hasTechnology> <http://www.w3.org/2000/01/rdf-schema#comment> "Base technology of a given Heat Pump"@en .
-<https://w3id.org/hpont#hasTechnology> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
-<https://w3id.org/hpont#hasTechnology> <http://www.w3.org/2000/01/rdf-schema#label> "has Technology"@en .
-<https://w3id.org/hpont#hasTechnology> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# https://w3id.org/hpont#hasPowerSupplyType
+<https://w3id.org/hpont#hasPowerSupplyType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/hpont#hasPowerSupplyType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/hpont#HeatPumpSystem> .
+<https://w3id.org/hpont#hasPowerSupplyType> <http://www.w3.org/2000/01/rdf-schema#comment> "Electric power supply type of the Heat Pump System"@en .
+<https://w3id.org/hpont#hasPowerSupplyType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
+<https://w3id.org/hpont#hasPowerSupplyType> <http://www.w3.org/2000/01/rdf-schema#label> "has Power Supply Type"@en .
+<https://w3id.org/hpont#hasPowerSupplyType> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 # 
 # 
 # 
@@ -183,38 +202,35 @@
 # http://purl.org/vocommons/voaf#Vocabulary
 <http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
-# https://w3id.org/hpont#HeatPump
-<https://w3id.org/hpont#HeatPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/hpont#HeatPump> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/hpont#SinglePhasePowerSupplyHeatPump> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/hpont#ThreePhasePowerSupplyHeatPump> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/hpont#HeatPump> <http://www.w3.org/2000/01/rdf-schema#comment> "A device that transfers heat from a colder area to a hotter area by using mechanical energy"@en .
-<https://w3id.org/hpont#HeatPump> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
-<https://w3id.org/hpont#HeatPump> <http://www.w3.org/2000/01/rdf-schema#label> "Heat Pump"@en .
-<https://w3id.org/hpont#HeatPump> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# https://w3id.org/hpont#HeatPumpOperatingMode
+<https://w3id.org/hpont#HeatPumpOperatingMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hpont#HeatPumpOperatingMode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/hpont#hasOperatingModeAvailable> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/hpont#HeatPumpOperatingMode> .
+<https://w3id.org/hpont#HeatPumpOperatingMode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/hpont#hasTechnology> .
+_:genid2 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/hpont#HeatPumpTechnology> .
+<https://w3id.org/hpont#HeatPumpOperatingMode> <http://www.w3.org/2000/01/rdf-schema#comment> "The operating mode of a given Heat Pump system"@en .
+<https://w3id.org/hpont#HeatPumpOperatingMode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
+<https://w3id.org/hpont#HeatPumpOperatingMode> <http://www.w3.org/2000/01/rdf-schema#label> "Heat Pump Operating Mode"@en .
+<https://w3id.org/hpont#HeatPumpOperatingMode> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 # 
-# https://w3id.org/hpont#SinglePhasePowerSupplyHeatPump
-<https://w3id.org/hpont#SinglePhasePowerSupplyHeatPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/hpont#SinglePhasePowerSupplyHeatPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/hpont#HeatPump> .
-<https://w3id.org/hpont#SinglePhasePowerSupplyHeatPump> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/hpont#ThreePhasePowerSupplyHeatPump> .
-<https://w3id.org/hpont#SinglePhasePowerSupplyHeatPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Heat Pump with single phase electric power supply."@en .
-<https://w3id.org/hpont#SinglePhasePowerSupplyHeatPump> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
-<https://w3id.org/hpont#SinglePhasePowerSupplyHeatPump> <http://www.w3.org/2000/01/rdf-schema#label> "Single Phase Power Supply Heat Pump"@en .
-<https://w3id.org/hpont#SinglePhasePowerSupplyHeatPump> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# https://w3id.org/hpont#HeatPumpSystem
+<https://w3id.org/hpont#HeatPumpSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hpont#HeatPumpSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "A system composed of one or many devices that transfer heat from a colder area to a hotter area by using mechanical energy"@en .
+<https://w3id.org/hpont#HeatPumpSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
+<https://w3id.org/hpont#HeatPumpSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Heat Pump System"@en .
+<https://w3id.org/hpont#HeatPumpSystem> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
-# https://w3id.org/hpont#ThreePhasePowerSupplyHeatPump
-<https://w3id.org/hpont#ThreePhasePowerSupplyHeatPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/hpont#ThreePhasePowerSupplyHeatPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/hpont#HeatPump> .
-<https://w3id.org/hpont#ThreePhasePowerSupplyHeatPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Heat Pump with three phase electric power supply. They are normaly the larger heat pumps."@en .
-<https://w3id.org/hpont#ThreePhasePowerSupplyHeatPump> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
-<https://w3id.org/hpont#ThreePhasePowerSupplyHeatPump> <http://www.w3.org/2000/01/rdf-schema#label> "Three Phase Power Supply Heat Pump"@en .
-<https://w3id.org/hpont#ThreePhasePowerSupplyHeatPump> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+# https://w3id.org/hpont#HeatPumpTechnology
+<https://w3id.org/hpont#HeatPumpTechnology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/hpont#HeatPumpTechnology> <http://www.w3.org/2000/01/rdf-schema#comment> "The base technology of a given Heat Pump system"@en .
+<https://w3id.org/hpont#HeatPumpTechnology> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
+<https://w3id.org/hpont#HeatPumpTechnology> <http://www.w3.org/2000/01/rdf-schema#label> "Heat Pump Technology"@en .
+<https://w3id.org/hpont#HeatPumpTechnology> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 # 
 # 
 # 
@@ -231,6 +247,7 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # https://w3id.org/hpont#ata
 <https://w3id.org/hpont#ata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/hpont#ata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/hpont#HeatPumpTechnology> .
 <https://w3id.org/hpont#ata> <http://purl.org/ontology/bibo/status> "testing" .
 <https://w3id.org/hpont#ata> <http://www.w3.org/2000/01/rdf-schema#comment> "Air-to-air Heat Pump technology."@en .
 <https://w3id.org/hpont#ata> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
@@ -238,6 +255,7 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # https://w3id.org/hpont#atw
 <https://w3id.org/hpont#atw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/hpont#atw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/hpont#HeatPumpTechnology> .
 <https://w3id.org/hpont#atw> <http://purl.org/ontology/bibo/status> "testing" .
 <https://w3id.org/hpont#atw> <http://www.w3.org/2000/01/rdf-schema#comment> "Air-to-water Heat Pump technology"@en .
 <https://w3id.org/hpont#atw> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
@@ -245,6 +263,7 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # https://w3id.org/hpont#dhwHeatingMode
 <https://w3id.org/hpont#dhwHeatingMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/hpont#dhwHeatingMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/hpont#HeatPumpOperatingMode> .
 <https://w3id.org/hpont#dhwHeatingMode> <http://purl.org/ontology/bibo/status> "testing" .
 <https://w3id.org/hpont#dhwHeatingMode> <http://www.w3.org/2000/01/rdf-schema#comment> "DHW heating operation mode of the Heat Pump"@en .
 <https://w3id.org/hpont#dhwHeatingMode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
@@ -252,6 +271,7 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # https://w3id.org/hpont#spaceCoolingMode
 <https://w3id.org/hpont#spaceCoolingMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/hpont#spaceCoolingMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/hpont#HeatPumpOperatingMode> .
 <https://w3id.org/hpont#spaceCoolingMode> <http://purl.org/ontology/bibo/status> "testing" .
 <https://w3id.org/hpont#spaceCoolingMode> <http://www.w3.org/2000/01/rdf-schema#comment> "Space cooling operation mode of the Heat Pump"@en .
 <https://w3id.org/hpont#spaceCoolingMode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
@@ -259,9 +279,28 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # https://w3id.org/hpont#spaceHeatingMode
 <https://w3id.org/hpont#spaceHeatingMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/hpont#spaceHeatingMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/hpont#HeatPumpOperatingMode> .
 <https://w3id.org/hpont#spaceHeatingMode> <http://purl.org/ontology/bibo/status> "testing" .
 <https://w3id.org/hpont#spaceHeatingMode> <http://www.w3.org/2000/01/rdf-schema#comment> "Space heating operation mode of the Heat Pump"@en .
 <https://w3id.org/hpont#spaceHeatingMode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/hpont#> .
 <https://w3id.org/hpont#spaceHeatingMode> <http://www.w3.org/2000/01/rdf-schema#label> "Space heating mode"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid3 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/hpont#ata> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/hpont#atw> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
 # Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
