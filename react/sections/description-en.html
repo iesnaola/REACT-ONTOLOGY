@@ -1,3 +1,32 @@
 <h2 id="desc" class="list">The REACT Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+In order to ensure the final quality of an ontology, this must be carefully designed and implemented. Therefore, the use of well-founded ontology development methodologies is advised. After reviewing different methodologies including OnToKnowledge and DILIGENT, the <b>REACT ontology developers decided to follow the LOT (Linked Open Terms) Methodology (<a href="https://lot.linkeddata.es/">https://lot.linkeddata.es/</a>)</b>. LOT is an industrial method for developing ontologies and vocabularies, and it has been used in other H2020 funded projects such as VICINITY , DELTA or BIMERR . It can be considered an evolution of the NeOn methodology, as it lightens it with sprints iterations (from the scrum software development framework) and covers the ontology publication following the best practices.
+</br></br>
+The main classes and relationships of the REACT ontology are the following:
+</br></br>
+<center><img src="resources/images/react.png" alt="REACT Ontology" width="75%"> <figcaption>REACT Ontology</figcaption></center>
+
+<h3>Based on Ontology Design Patterns</h3>
+The use and combination of Ontology Design Patterns (ODP) is conceived as a suitable option when developing ontologies, due to the great flexibility provided which allows a proper segmentation of the intended conceptualisation. And this is the way in which the REACT ontology has been designed. However, instead of defining our own ODPs, following the ontology engineering best practices, a thorough analysis of existing ODPs have been performed searching in specialised catalogues such as <a href="http://ontologydesignpatterns.org/wiki/Main_Page">OntologyDesignPatterns.org</a>, in order to reuse existing ones. Namely, </b>the AffectedBy ODP and the Execution-Executor-Procedure (EEP) ODP have been reused</b>. It is worth mentioning that these ODPs have already been reused by different ontologies such as by the EEPSA ontology (<a href="https://w3id.org/eepsa">https://w3id.org/eepsa</a>) for supporting a data analyst assistant in energy efficiency and thermal comfort problems in buildings. The main classes and properties of the mentioned ODPs are the following:
+</br></br>
+<center><img src="resources/images/ODP.png" alt="EEP Ontology Design Pattern" width="75%"> <figcaption>EEP Ontology Design Pattern</figcaption></center>
+
+<h3>Reusing well-known Ontologies</h3>
+The ODPs mentioned are conceived as the backbone of the REACT ontology. On top of these ODPs, a set of classes, individuals, relationships and restrictions are constructed to satisfy all the requirements previously indicated. Once again, instead of directly encoding our own concepts, <b>the REACT ontology's development has been based on the best practices and an ontology reusing effort has been made</b>. Different ontologies have been searched, compared, evaluated and finally selected according to their suitability for satisfying the collected platform and user requirements. Some of the selected and (partially) reused ontologies are the following ones:
+
+<h4>SAREF</h4>
+SAREF (Smart Appliances REFerence) ontology (<a href="https://saref.etsi.org/">https://saref.etsi.org</a>) facilitates the matching of existing assets in the smart appliances’ domain. The central concept of the ontology is the <i>saref:Device</i> class, which is modelled in terms of functions, associated commands, states and provided services. <b>The REACT ontology has reused properties such as <i>saref:hasManufacturer</i> to represent the manufacturer of a given equipment</b>.
+
+<h4>BOT</h4>
+BOT (Building Topology Ontology) (<a href="https://w3id.org/bot">https://w3id.org/bot</a>) is a minimal ontology developed by the W3C LBD (Linked Building Data) Community Group for covering core concepts of a building and for defining the relationships between their subcomponents. BOT serves as an ontology that could promote its reuse as a central ontology in the AEC (Architecture, Engineering and Construction) domain. <b>In the context of the REACT ontology, classes such as <i>bot:Site</i> and <i>bot:Space</i> have been reused for representing the basic topological information, and properties such as <i>bot:hasElement</i> to represent the relationship between the equipment contained within the pilot sites</b>.
+
+<h4>QUDT</h4>
+The QUDT (<a href="http://www.qudt.org/">http://www.qudt.org/</a>) is an initiative sponsored by the NASA to formalize Quantities, Units of Measure, Dimensions and Types using ontologies. In this regard, <b>the REACT ontology has leveraged certain properties such as <i>qudt:unit</i> to associate observations/actuations with the units in which they are measured, and additionally, certain classes from the UNIT ontology (which is also part of the QUDT) like <i>unit:W-HR</i> for Wh and <i>unit:DEG_C</i> for Degrees Celsius have been reused to represent such units of measurements</b>.
+
+
+<h3>Following a modular approach</h3>
+The ontology modularization consists in partitioning them into independent self-contained knowledge components. Such a modular approach brings benefits, including the flexibility for component reuse, the support for more efficient query answering, and the enhancement of component changes and evolution.
+</br></br>
+The implementation of ontology modularization techniques is advised in early ontology development stages because, otherwise, it could end up being a complex task. This is why, for the development of the REACT ontology, it has been considered from the very beginning. During the ontology requirements collection, <b>those pertaining the heat pump systems topic were grouped and separated from the rest with a view to developing the <a href="https://w3id.org/hpont">HPOnt (Heat Pump Ontology)</a></b> to benefit from the aforementioned characteristics. The HPOnt aims to formalize and represent all the relevant information of Heat Pump systems such as their cooling capacity (<i>hpont:hasNominalCoolingCapacity</i>) or consumption in heating mode (<i>hpont:hasNominalPowerConsumptionInHeatingMode</i>). 
+
+</span>
